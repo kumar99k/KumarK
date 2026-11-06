@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kiran Kumar Kumawat – Software Engineer & Tech Lead</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#0a0a1f;--ink:#eef0ff;--mute:#a4a9d0;
+  --glass:rgba(255,255,255,.07);--glass-b:rgba(255,255,255,.16);--shadow:rgba(0,0,0,.35);
+  --a:#5eead4;--b:#8b7bff;--c:#ffb86b;
+  --blob1:rgba(94,234,212,.35);--blob2:rgba(139,123,255,.45);--blob3:rgba(255,184,107,.28);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){
+  color-scheme:light;--bg:#eef0fb;--ink:#14163a;--mute:#4d5282;
+  --glass:rgba(255,255,255,.55);--glass-b:rgba(255,255,255,.9);--shadow:rgba(60,60,140,.18);
+  --a:#0f9e8c;--b:#5a46e6;--c:#d9780f;--blob1:rgba(15,158,140,.25);--blob2:rgba(90,70,230,.28);--blob3:rgba(217,120,15,.22);}}
+:root[data-theme="light"]{color-scheme:light;--bg:#eef0fb;--ink:#14163a;--mute:#4d5282;
+  --glass:rgba(255,255,255,.55);--glass-b:rgba(255,255,255,.9);--shadow:rgba(60,60,140,.18);
+  --a:#0f9e8c;--b:#5a46e6;--c:#d9780f;--blob1:rgba(15,158,140,.25);--blob2:rgba(90,70,230,.28);--blob3:rgba(217,120,15,.22);}
+html{height:auto;scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Sora,"DM Sans",system-ui,sans-serif;line-height:1.15;margin:0}
+.bg{position:fixed;inset:0;z-index:-1;overflow:hidden}
+.bg i{position:absolute;border-radius:50%;filter:blur(70px);animation:drift 22s ease-in-out infinite alternate}
+.bg i:nth-child(1){width:48vmax;height:48vmax;background:var(--blob1);top:-12%;left:-10%}
+.bg i:nth-child(2){width:55vmax;height:55vmax;background:var(--blob2);bottom:-20%;right:-15%;animation-delay:-8s}
+.bg i:nth-child(3){width:35vmax;height:35vmax;background:var(--blob3);top:40%;left:40%;animation-delay:-14s}
+@keyframes drift{to{transform:translate(8vw,6vh) scale(1.15)}}
+.glass{background:var(--glass);border:1px solid var(--glass-b);border-radius:24px;backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%);box-shadow:0 18px 50px var(--shadow),inset 0 1px 0 var(--glass-b)}
+nav{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:50%;transform:translateX(-50%);z-index:20;display:flex;gap:4px;padding:6px;border-radius:999px;max-width:94vw;overflow-x:auto;scrollbar-width:none}
+nav a{color:var(--mute);text-decoration:none;padding:7px 14px;border-radius:999px;font-size:14px;white-space:nowrap;transition:.2s}
+nav a:hover,nav a:focus-visible{color:var(--ink);background:var(--glass-b);outline:none}
+nav button{all:unset;cursor:pointer;padding:7px 12px;border-radius:999px;color:var(--mute);font-size:14px}
+nav button:hover,nav button:focus-visible{background:var(--glass-b);color:var(--ink)}
+main{max-width:1080px;margin:0 auto;padding:0 20px 60px}
+section{padding:70px 0 0}
+h2{font-size:clamp(26px,4vw,36px);margin-bottom:26px}
+.hero{min-height:100svh;display:grid;grid-template-columns:1.05fr 1fr;gap:20px;align-items:center;padding-top:90px}
+.hero h1{font-size:clamp(38px,6.4vw,68px);font-weight:800;letter-spacing:-.02em}
+.grad{background:linear-gradient(100deg,var(--a),var(--b) 55%,var(--c));-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% auto;animation:sheen 7s linear infinite}
+@keyframes sheen{to{background-position:200% center}}
+.role{font:500 clamp(17px,2.4vw,22px)/1.4 Sora,sans-serif;color:var(--mute);margin:16px 0 8px;min-height:1.4em}
+.role b{color:var(--ink);font-weight:500;border-right:2px solid var(--a);padding-right:3px;animation:caret 1s steps(1) infinite}
+@keyframes caret{50%{border-color:transparent}}
+.lead{color:var(--mute);max-width:46ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:700;color:var(--ink);border:1px solid var(--glass-b);background:var(--glass);backdrop-filter:blur(14px);transition:transform .2s,box-shadow .2s}
+.btn.pri{background:linear-gradient(100deg,var(--a),var(--b));color:#06061a;border:0}
+.btn:hover,.btn:focus-visible{transform:translateY(-3px);box-shadow:0 10px 26px var(--shadow);outline:none}
+.stage{aspect-ratio:1;width:100%;max-width:520px;justify-self:center;position:relative;border-radius:50%}
+canvas{width:100%;height:100%;display:block}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+.stat{padding:22px 16px;text-align:center}
+.stat strong{font:800 clamp(28px,4vw,40px) Sora,sans-serif;display:block}
+.stat span{color:var(--mute);font-size:14px}
+.two{display:grid;grid-template-columns:1.2fr 1fr;gap:18px}
+.card{padding:26px}
+.card p{margin:0 0 12px;color:var(--mute)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:6px 14px;border-radius:999px;font-size:14px;background:var(--glass);border:1px solid var(--glass-b);transition:.2s}
+.chip:hover{transform:translateY(-2px);border-color:var(--a)}
+.skillgrp{margin-bottom:18px}.skillgrp h3{font-size:15px;color:var(--a);margin-bottom:10px}
+.tl{position:relative;padding-left:28px}
+.tl:before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--a),var(--b),var(--c));border-radius:2px}
+.step{position:relative;margin-bottom:18px;padding:22px 24px}
+.step:before{content:"";position:absolute;left:-28px;top:28px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--a);box-shadow:0 0 0 0 var(--a);animation:pulse 2.4s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 12px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.step h3{font-size:18px}.step small{color:var(--c);font-weight:700}
+.step p{color:var(--mute);margin:8px 0 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.proj{padding:24px;position:relative;overflow:hidden;transition:transform .25s;--mx:50%;--my:0%}
+.proj:before{content:"";position:absolute;inset:0;background:radial-gradient(240px circle at var(--mx) var(--my),var(--glass-b),transparent 70%);opacity:0;transition:.3s}
+.proj:hover{transform:translateY(-5px)}.proj:hover:before{opacity:1}
+.proj>*{position:relative}
+.proj h3{font-size:19px}.proj em{font-style:normal;color:var(--a);font-size:13px;display:block;margin:6px 0 10px}
+.proj p{margin:0;color:var(--mute);font-size:15px}
+.edu{list-style:none;margin:0;padding:0}
+.edu li{padding:11px 0;border-bottom:1px solid var(--glass-b)}.edu li:last-child{border:0}
+.edu b{display:block}.edu span{color:var(--mute);font-size:14px}
+.str h3{font-size:17px;margin-bottom:8px}
+.contact{text-align:center;padding:46px 24px}
+.contact h2{margin-bottom:12px}
+.contact .cta{justify-content:center}
+footer{text-align:center;color:var(--mute);font-size:14px;margin-top:34px}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.rv.on{opacity:1;transform:none}
+@media (max-width:820px){.hero{grid-template-columns:1fr;padding-top:100px;min-height:0}.stage{max-width:400px}.two{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
+<nav class="glass" aria-label="Sections">
+  <a href="#about">About</a><a href="#skills">Skills</a><a href="#journey">Journey</a><a href="#projects">Projects</a><a href="#learning">Education</a><a href="#contact">Contact</a>
+  <button id="theme" aria-label="Toggle light or dark theme">◐</button>
+</nav>
+<main>
+  <header class="hero" id="top">
+    <div>
+      <h1>Hi, I’m <span class="grad">Kumar</span></h1>
+      <div class="role"><b id="typed"></b></div>
+      <p class="lead">I build web applications end to end: database schema, REST APIs and the responsive interface people actually use. I also lead a small team shipping them.</p>
+      <div class="cta"><a class="btn pri" href="#projects">See my projects</a><a class="btn" href="#contact">Get in touch</a></div>
+    </div>
+    <div class="stage" aria-label="Animated map of my tech stack: .NET, MSSQL, Python, PostgreSQL and more"><canvas id="net"></canvas></div>
+  </header>
+
+  <div class="stats">
+    <div class="glass stat"><strong data-n="3" data-s="+">0</strong><span>Years of experience</span></div>
+    <div class="glass stat"><strong data-n="2">0</strong><span>Promotions at SMB Solutions</span></div>
+    <div class="glass stat"><strong data-n="8" data-s="+">0</strong><span>Production and internal apps</span></div>
+    <div class="glass stat"><strong data-n="2">0</strong><span>Stacks: .NET/MSSQL and Python/PostgreSQL</span></div>
+  </div>
+
+  <section id="about" class="rv">
+    <h2>About me</h2>
+    <div class="two">
+      <div class="glass card">
+        <p>I’m a Software Engineer and Tech Lead with 3+ years of experience building and shipping web applications on .NET Web Forms, .NET APIs, Python APIs, MSSQL and PostgreSQL.</p>
+        <p>At SMB Solutions I went from intern to junior to senior developer by owning full feature delivery. Today I lead a small team across 8+ production and internal applications.</p>
+        <p>I stay the direct point of contact for clients, turning their requirements into delivered features without extra layers in between.</p>
+      </div>
+      <div class="glass card str">
+        <h3>What I bring</h3>
+        <div class="chips"><span class="chip">Full-stack ownership</span><span class="chip">Team leadership</span><span class="chip">Client communication</span><span class="chip">Fast cross-stack learner</span></div>
+        <p style="margin-top:16px">I picked up Python and PostgreSQL on the job next to my core .NET and MSSQL stack, and I carry that adaptability into every new project.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="rv">
+    <h2>Skills</h2>
+    <div class="glass card">
+      <div class="skillgrp"><h3>Backend</h3><div class="chips"><span class="chip">C#</span><span class="chip">.NET Web Forms</span><span class="chip">.NET API</span><span class="chip">Python (basic)</span><span class="chip">Python API</span><span class="chip">REST APIs</span></div></div>
+      <div class="skillgrp"><h3>Frontend</h3><div class="chips"><span class="chip">JavaScript</span><span class="chip">HTML5</span><span class="chip">CSS</span><span class="chip">Bootstrap</span><span class="chip">Tailwind</span><span class="chip">Responsive design</span></div></div>
+      <div class="skillgrp"><h3>Data and tools</h3><div class="chips"><span class="chip">MSSQL</span><span class="chip">PostgreSQL</span><span class="chip">Git</span></div></div>
+      <div class="skillgrp" style="margin:0"><h3>Ways of working</h3><div class="chips"><span class="chip">Agile</span><span class="chip">Team leadership</span><span class="chip">Client management</span><span class="chip">Code review</span><span class="chip">Delivery oversight</span></div></div>
+    </div>
+  </section>
+
+  <section id="journey" class="rv">
+    <h2>Career journey</h2>
+    <div class="tl">
+      <div class="glass step"><small>Aug 2023 – Present</small><h3>Senior Software Developer / Tech Lead · SMB Solutions</h3><p>Owns delivery across .NET Web Forms, .NET APIs, MSSQL and PostgreSQL projects, from schema design through APIs to responsive front ends. Leads a small team on Managewise, MCL and Store MIS, with ownership of architecture decisions, code reviews and delivery timelines.</p></div>
+      <div class="glass step"><small>Within a year</small><h3>Junior to Senior Software Developer</h3><p>Promoted for consistently shipping complete features end to end and growing into architecture and client communication.</p></div>
+      <div class="glass step"><small>Start</small><h3>Intern to full-time Developer</h3><p>A 1.5-month internship converted straight into a full-time role on performance.</p></div>
+    </div>
+  </section>
+
+  <section id="projects" class="rv">
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="glass proj"><h3>Managewise</h3><em>.NET Web Forms · .NET API · MSSQL · Team lead</em><p>A management platform with a Web Forms front end and a dedicated REST API layer on MSSQL. I own architecture and API design and review the team’s code.</p></article>
+      <article class="glass proj"><h3>MCL & Store MIS</h3><em>Full stack · Team lead</em><p>Two internal management information systems, led from requirements through delivery.</p></article>
+      <article class="glass proj"><h3>Saifee Hospital Arcanum</h3><em>.NET Web Forms · MSSQL</em><p>A hospital management system for patient records and workflow management.</p></article>
+      <article class="glass proj"><h3>JointWorks</h3><em>.NET Web Forms · E-Invoice · Bootstrap · MSSQL</em><p>A full-stack web application I still maintain. I designed the schema, server logic and UI end to end.</p></article>
+      <article class="glass proj"><h3>HubWash</h3><em>Python API · PostgreSQL · Telegram Bot</em><p>Backend Python APIs on PostgreSQL, built outside my primary .NET stack.</p></article>
+      <article class="glass proj"><h3>Occasionly & Scout Troop Mgmt</h3><em>.NET API · Backend</em><p>.NET API backends for a date-reminder tool and a scout-troop management tool, both under ongoing maintenance.</p></article>
+      <article class="glass proj"><h3>Driversmate</h3><em>Flutter · Mobile</em><p>A cross-platform mobile application built with Flutter.</p></article>
+    </div>
+  </section>
+
+  <section id="learning" class="rv">
+    <h2>Education and certifications</h2>
+    <div class="two">
+      <div class="glass card"><ul class="edu">
+        <li><b>MCA (pursuing)</b><span>Chandrabhan Sharma College, Mumbai</span></li>
+        <li><b>B.Sc. Information Technology · 75%</b><span>Thakur College of Science & Commerce, Mumbai</span></li>
+        <li><b>HSC (Science) · 67%</b><span>Thakur College of Science & Commerce, Mumbai</span></li>
+        <li><b>SSC · 80.80%</b><span>Anudatt Vidyalaya, Mumbai</span></li></ul></div>
+      <div class="glass card"><ul class="edu">
+        <li><b>Software Testing Tutorial</b><span>Great Learning · Mar 2022</span></li>
+        <li><b>OOPS Concepts in C++</b><span>Great Learning · Feb 2022</span></li>
+        <li><b>Java Programming</b><span>Great Learning · Jan 2022</span></li>
+        <li><b>Programming for Everybody (Python)</b><span>Coursera · Sep 2021</span></li>
+        <li><b>Cyber Threat Intelligence</b><span>Coursera · Aug 2021</span></li>
+        <li><b>How to Make a Game with Unity</b><span>BitDegree · Oct 2020</span></li></ul></div>
+    </div>
+  </section>
+
+  <section id="contact" class="rv">
+    <div class="glass contact">
+      <h2>Let’s build something together</h2>
+      <p class="lead" style="margin:0 auto">Open to software engineering and tech lead roles. Based in Mumbai, India.</p>
+      <div class="cta"><a class="btn pri" href="mailto:mr.kumar9982@gmail.com">mr.kumar9982@gmail.com</a><a class="btn" href="tel:+919982664798">+91 99826 64798</a></div>
+    </div>
+    <footer>© Kiran Kumar Kumawat</footer>
+  </section>
+</main>
+<script>
+(function(){
+  var rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  var root=document.documentElement;
+  document.getElementById("theme").onclick=function(){
+    var dark=root.getAttribute("data-theme")?root.getAttribute("data-theme")==="dark":!matchMedia("(prefers-color-scheme:light)").matches;
+    root.setAttribute("data-theme",dark?"light":"dark");
+  };
+  // typed roles
+  var roles=["Software Engineer","Tech Lead","Full-stack .NET and Python developer","API architect"],t=document.getElementById("typed"),ri=0,ci=0,del=false;
+  function tick(){var w=roles[ri];
+    if(rm){t.textContent=w;return}
+    t.textContent=w.slice(0,ci);
+    if(!del&&ci===w.length){del=true;return setTimeout(tick,1500)}
+    if(del&&ci===0){del=false;ri=(ri+1)%roles.length}
+    ci+=del?-1:1;setTimeout(tick,del?35:70)}
+  tick();
+  // reveal + counters
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+  document.querySelectorAll("[data-n]").forEach(function(el){
+    var n=+el.dataset.n,s=el.dataset.s||"",st=null;
+    function f(ts){st=st||ts;var p=Math.min((ts-st)/1400,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3)))+(p===1?s:"");if(p<1)requestAnimationFrame(f)}
+    rm?el.textContent=n+s:requestAnimationFrame(f)});
+  // card spotlight
+  document.querySelectorAll(".proj").forEach(function(c){c.addEventListener("pointermove",function(e){var r=c.getBoundingClientRect();c.style.setProperty("--mx",(e.clientX-r.left)+"px");c.style.setProperty("--my",(e.clientY-r.top)+"px")})});
+  // tech-stack network
+  var cv=document.getElementById("net"),x=cv.getContext("2d"),W,H,dpr=Math.min(devicePixelRatio||1,2),mx=0,my=0;
+  var names=[".NET","C#","MSSQL","Python","PostgreSQL","REST API","JavaScript","Tailwind","Git","Flutter","Bootstrap","Agile"];
+  var nodes=names.map(function(n,i){var ring=i<6?0:1;return{n:n,r:ring?.43:.27,a:i/(ring?6:6)*Math.PI*2+ring*.5,s:(ring?-1:1)*(.0016+Math.random()*.0008)}});
+  function size(){var b=cv.getBoundingClientRect();W=b.width;H=b.height;cv.width=W*dpr;cv.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  size();addEventListener("resize",size);
+  cv.parentNode.addEventListener("pointermove",function(e){var b=cv.getBoundingClientRect();mx=(e.clientX-b.left)/W-.5;my=(e.clientY-b.top)/H-.5});
+  function col(v){return getComputedStyle(root).getPropertyValue(v).trim()}
+  var C,fr=0;
+  function draw(){
+    if(fr++%30===0)C={a:col("--a"),b:col("--b"),c:col("--c"),ink:col("--ink")};
+    x.clearRect(0,0,W,H);var cx=W/2+mx*18,cy=H/2+my*18,u=Math.min(W,H),pts=[];
+    [.27,.43].forEach(function(r,i){x.beginPath();x.arc(cx,cy,r*u,0,7);x.strokeStyle=C.b;x.globalAlpha=.25;x.setLineDash([4,8]);x.lineWidth=1;x.stroke()});
+    x.setLineDash([]);
+    nodes.forEach(function(o){if(!rm)o.a+=o.s;var px=cx+Math.cos(o.a)*o.r*u,py=cy+Math.sin(o.a)*o.r*u*.92;pts.push([px,py,o])});
+    pts.forEach(function(p,i){x.globalAlpha=.35;x.strokeStyle=C.a;x.lineWidth=1;x.beginPath();x.moveTo(cx,cy);x.lineTo(p[0],p[1]);x.stroke();
+      var q=pts[(i+1)%pts.length];if((i<6)===(((i+1)%pts.length)<6)){x.strokeStyle=C.b;x.globalAlpha=.3;x.beginPath();x.moveTo(p[0],p[1]);x.lineTo(q[0],q[1]);x.stroke()}
+      var k=(performance.now()/1800+i*.17)%1;x.globalAlpha=.9;x.fillStyle=C.c;x.beginPath();x.arc(cx+(p[0]-cx)*k,cy+(p[1]-cy)*k,2.5,0,7);x.fill()});
+    var g=x.createRadialGradient(cx,cy,0,cx,cy,u*.14);g.addColorStop(0,C.a);g.addColorStop(1,C.b);
+    x.globalAlpha=1;x.fillStyle=g;x.beginPath();x.arc(cx,cy,u*.1+Math.sin(performance.now()/500)*3,0,7);x.fill();
+    x.fillStyle="#06061a";x.font="800 "+u*.045+"px Sora,sans-serif";x.textAlign="center";x.textBaseline="middle";x.fillText("",cx,cy);
+    x.font="500 "+Math.max(11,u*.03)+"px 'DM Sans',sans-serif";
+    pts.forEach(function(p){var w=x.measureText(p[2].n).width+20,h=u*.062;
+      x.globalAlpha=.9;x.fillStyle="rgba(255,255,255,.12)";x.strokeStyle=C.a;x.lineWidth=1;
+      x.beginPath();x.roundRect(p[0]-w/2,p[1]-h/2,w,h,h/2);x.fill();x.globalAlpha=.7;x.stroke();
+      x.globalAlpha=1;x.fillStyle=C.ink;x.fillText(p[2].n,p[0],p[1]+1)});
+    x.globalAlpha=1;if(!rm)requestAnimationFrame(draw)}
+  draw();
+})();
+</script>
+</body>
+</html>
